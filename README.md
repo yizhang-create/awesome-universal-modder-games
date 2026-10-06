@@ -3,7 +3,7 @@
 > Can you mod **your** game with [universal-modder](https://github.com/rehan-remade/universal-modder) + Claude Code?
 > A community compatibility list — because the project ships 12 engine playbooks, but no list of which games actually work.
 
-![games](https://img.shields.io/badge/games_indexed-36-a4d780?style=flat-square) ![verdicts](https://img.shields.io/badge/moddable-experimental-banned-e4bc69?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-939c8d?style=flat-square)
+![games](https://img.shields.io/badge/games_indexed-36-a4d780?style=flat-square) ![verdicts](https://img.shields.io/badge/moddable-experimental-banned-e4bc69?style=flat-square) ![CI](https://github.com/yizhang-create/awesome-universal-modder-games/actions/workflows/ci.yml/badge.svg?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-939c8d?style=flat-square)
 
 **[universal-modder](https://github.com/rehan-remade/universal-modder)** is an open-source, MIT-licensed plugin by [`rehan-remade`](https://github.com/rehan-remade) that teaches coding agents (Claude Code, Codex, Gemini CLI, Cursor…) how to mod PC games. Since late September 2026 it has exploded on X, Reddit and YouTube — and the single most common question in every thread is:
 
@@ -80,6 +80,10 @@ Three steps before installing anything:
 
 Want a game added? [Open an issue](../../issues) or [send a PR](CONTRIBUTING.md) — or [request it on canyoumod.com](https://canyoumod.com/games).
 
+## Which engine is my game?
+
+The engine decides the route. The [engine cheat sheet](ENGINES.md) covers the three families most first projects land in (.NET/XNA, Unity, Creation Engine) — how to recognize each from its files, the route to take, and the classic pitfalls — plus an engine map of all 36 games in this list. Full interactive versions with starter prompts: [canyoumod.com/engines](https://canyoumod.com/engines).
+
 ## Install universal-modder (Claude Code, 30 seconds)
 
 ```
@@ -100,7 +104,7 @@ Offline, single-player work only. No anti-cheat or DRM bypasses, and no cheats a
 
 ## Contributing
 
-Verdicts are source-based assessments, not hands-on tests — corrections and new games are very welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). Data lives in [`data/games.json`](data/games.json).
+Verdicts are source-based assessments, not hands-on tests — corrections and new games are very welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). Data lives in [`data/games.json`](data/games.json) and every PR is validated by CI ([`scripts/validate-data.mjs`](scripts/validate-data.mjs)): unique kebab-case slugs, valid verdicts, and every `not_recommended` entry must carry an anti-cheat/online safety reason.
 
 ## Credits & license
 
