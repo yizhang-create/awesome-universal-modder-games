@@ -1,0 +1,924 @@
+[
+  {
+    "game": "Terraria",
+    "slug": "terraria",
+    "aliases": [
+      "tmodloader",
+      "terraria pc"
+    ],
+    "engine": {
+      "name": ".NET / XNA / FNA",
+      "slug": "dotnet-xna",
+      "notes": "tModLoader has a dedicated C# content API; match its supported Terraria branch."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "tModLoader provides a documented content API.",
+      "Upstream records an in-game single-player example.",
+      "Multiplayer was not verified in that field note."
+    ],
+    "route": "Start with a small tModLoader item mod in a new single-player world.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/terraria/fal-arsenal-tmodloader.md",
+    "sources": [
+      "https://github.com/tModLoader/tModLoader",
+      "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/terraria/fal-arsenal-tmodloader.md"
+    ],
+    "more": "https://canyoumod.com/games/terraria"
+  },
+  {
+    "game": "Stardew Valley",
+    "slug": "stardew-valley",
+    "aliases": [
+      "stardew",
+      "sdv"
+    ],
+    "engine": {
+      "name": ".NET / MonoGame",
+      "slug": "dotnet-xna",
+      "notes": "SMAPI loads C# mods and supports a documented event API."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "SMAPI is a maintained, game-specific mod framework.",
+      "Content packs can keep a first change small.",
+      "Use a separate farm to test save compatibility."
+    ],
+    "route": "Use SMAPI; choose a content pack for data changes and C# only when needed.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/Pathoschild/SMAPI"
+    ],
+    "more": "https://canyoumod.com/games/stardew-valley"
+  },
+  {
+    "game": "Minecraft: Java Edition",
+    "slug": "minecraft",
+    "aliases": [
+      "minecraft java",
+      "mc",
+      "minecraft java edition"
+    ],
+    "engine": {
+      "name": "Java / Minecraft",
+      "slug": "minecraft",
+      "notes": "Java Edition loaders are not interchangeable with Bedrock add-ons."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Fabric exposes documented hooks for Java Edition.",
+      "Upstream also records a NeoForge content example.",
+      "This entry covers a local single-player world only."
+    ],
+    "route": "Choose Fabric or NeoForge for your exact Java Edition version; do not mix loaders.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/minecraft/neoforge-1-21-1-custom-dimension-and-tool-tier.md",
+    "sources": [
+      "https://github.com/FabricMC/fabric-api",
+      "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md"
+    ],
+    "more": "https://canyoumod.com/games/minecraft"
+  },
+  {
+    "game": "Celeste",
+    "slug": "celeste",
+    "aliases": [
+      "celeste everest"
+    ],
+    "engine": {
+      "name": ".NET / XNA / FNA",
+      "slug": "dotnet-xna",
+      "notes": "Everest is the community mod loader and API for Celeste."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Everest provides a dedicated modding API.",
+      "Custom levels make a focused first project.",
+      "Loader and game versions still need to match."
+    ],
+    "route": "Use Everest and its recommended level editor for a small original map.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/EverestAPI/Everest"
+    ],
+    "more": "https://canyoumod.com/games/celeste"
+  },
+  {
+    "game": "The Elder Scrolls V: Skyrim",
+    "slug": "skyrim",
+    "aliases": [
+      "skyrim se",
+      "skyrim special edition",
+      "skyrim anniversary edition",
+      "tes v"
+    ],
+    "engine": {
+      "name": "Creation Engine",
+      "slug": "creation-engine",
+      "notes": "SE, AE, classic and VR use different tools; SKSE support also depends on storefront."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Creation Engine plugins offer a documented content route.",
+      "Script extenders are version-specific and optional for simple edits.",
+      "A new test save helps isolate load-order problems."
+    ],
+    "route": "Start with a small Creation Kit plugin; add SKSE only when your feature needs it.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://skse.silverlock.org/",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/bethesda.md"
+    ],
+    "more": "https://canyoumod.com/games/skyrim"
+  },
+  {
+    "game": "Fallout 4",
+    "slug": "fallout-4",
+    "aliases": [
+      "fo4",
+      "fallout4"
+    ],
+    "engine": {
+      "name": "Creation Engine",
+      "slug": "creation-engine",
+      "notes": "The game runtime and F4SE release must match if you need native plugins."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Creation Kit plugins cover many content changes.",
+      "F4SE publishes compatibility for specific runtime builds.",
+      "A clean test save is needed before changing scripted content."
+    ],
+    "route": "Use a small Creation Kit plugin first; keep F4SE optional.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://f4se.silverlock.org/",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/bethesda.md"
+    ],
+    "more": "https://canyoumod.com/games/fallout-4"
+  },
+  {
+    "game": "Fallout: New Vegas",
+    "slug": "fallout-new-vegas",
+    "aliases": [
+      "fallout nv",
+      "fnv",
+      "new vegas"
+    ],
+    "engine": {
+      "name": "Gamebryo",
+      "slug": "creation-engine",
+      "notes": "New Vegas uses GECK-era plugins and xNVSE, not the newer Creation Kit."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "xNVSE provides a game-specific scripting extension.",
+      "Small record edits can avoid native plugins.",
+      "Dependencies and save persistence need review."
+    ],
+    "route": "Prefer a small GECK plugin; use xNVSE only for unsupported scripting needs.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/xNVSE/NVSE",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/bethesda.md"
+    ],
+    "more": "https://canyoumod.com/games/fallout-new-vegas"
+  },
+  {
+    "game": "Starfield",
+    "slug": "starfield",
+    "aliases": [
+      "star field",
+      "sfse"
+    ],
+    "engine": {
+      "name": "Creation Engine 2",
+      "slug": "creation-engine",
+      "notes": "Creation Kit content and SFSE native plugins have different requirements."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "A Creation Engine content route exists.",
+      "SFSE supports specific game runtimes.",
+      "Check platform and extender support before planning code mods."
+    ],
+    "route": "Begin with Creation Kit content; use a compatible SFSE build only if needed.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://sfse.silverlock.org/",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/bethesda.md"
+    ],
+    "more": "https://canyoumod.com/games/starfield"
+  },
+  {
+    "game": "RimWorld",
+    "slug": "rimworld",
+    "aliases": [
+      "rim world"
+    ],
+    "engine": {
+      "name": "Unity / C#",
+      "slug": "unity",
+      "notes": "XML Defs cover data; Harmony is for more advanced behavior changes."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "XML supports a small data-first mod.",
+      "C# and Harmony are available for deeper work.",
+      "DLC and load order affect compatibility."
+    ],
+    "route": "Start with XML Defs in a separate mod folder and a disposable colony.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/unity.md",
+      "https://www.ludeon.com/forums/index.php?topic=33219.0"
+    ],
+    "more": "https://canyoumod.com/games/rimworld"
+  },
+  {
+    "game": "Factorio",
+    "slug": "factorio",
+    "aliases": [
+      "factorio 2",
+      "factorio space age"
+    ],
+    "engine": {
+      "name": "Custom C++ / Lua API",
+      "slug": "native",
+      "notes": "Wube provides Lua prototype and runtime APIs; use documentation for your installed version."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "The developer exposes a documented Lua mod API.",
+      "New recipes and items can use data-stage prototypes.",
+      "Expansion dependencies must be declared."
+    ],
+    "route": "Build a small Lua data mod and test it in a fresh local map.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://wiki.factorio.com/Tutorial:Modding_tutorial/Gangsir",
+      "https://lua-api.factorio.com/"
+    ],
+    "more": "https://canyoumod.com/games/factorio"
+  },
+  {
+    "game": "Baldur's Gate 3",
+    "slug": "baldurs-gate-3",
+    "aliases": [
+      "bg3",
+      "baldurs gate iii",
+      "baldurs gate 3"
+    ],
+    "engine": {
+      "name": "Divinity Engine",
+      "slug": "larian",
+      "notes": "Larian provides an official PC toolkit and in-game mod manager."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "An official toolkit supports custom content.",
+      "Equipment is a focused first change.",
+      "Modded saves retain dependencies on installed mods."
+    ],
+    "route": "Use the official Baldur's Gate 3 Toolkit for a local equipment mod.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://larian.com/support/faqs/official-mod-support_113",
+      "https://forums.larian.com/ubbthreads.php?Number=958170&ubb=showthreaded"
+    ],
+    "more": "https://canyoumod.com/games/baldurs-gate-3"
+  },
+  {
+    "game": "Cyberpunk 2077",
+    "slug": "cyberpunk-2077",
+    "aliases": [
+      "cyberpunk",
+      "cp2077"
+    ],
+    "engine": {
+      "name": "REDengine 4",
+      "slug": "redengine",
+      "notes": "Official modding support exists; advanced frameworks have their own compatibility requirements."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "CD PROJEKT RED publishes modding resources.",
+      "REDmod offers a content-focused starting point.",
+      "Game updates can invalidate third-party frameworks."
+    ],
+    "route": "Start with a REDmod content change; add community frameworks only for a clear requirement.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://www.cyberpunk.net/en/modding-support",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/big-frameworks.md"
+    ],
+    "more": "https://canyoumod.com/games/cyberpunk-2077"
+  },
+  {
+    "game": "Subnautica",
+    "slug": "subnautica",
+    "aliases": [
+      "subnautica original"
+    ],
+    "engine": {
+      "name": "Unity / C#",
+      "slug": "unity",
+      "notes": "Nautilus is the game-specific API; legacy and current game branches differ."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Nautilus provides Subnautica modding APIs.",
+      "A small item is easier to validate than a world overhaul.",
+      "Match the game branch before selecting dependencies."
+    ],
+    "route": "Use the current Nautilus installation guide and a new local save.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/SubnauticaModding/Nautilus"
+    ],
+    "more": "https://canyoumod.com/games/subnautica"
+  },
+  {
+    "game": "Hollow Knight",
+    "slug": "hollow-knight",
+    "aliases": [
+      "hk",
+      "hollowknight"
+    ],
+    "engine": {
+      "name": "Unity / C#",
+      "slug": "unity",
+      "notes": "The community Modding API is specific to Hollow Knight, not Silksong."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "A dedicated community modding API exists.",
+      "The API avoids starting from raw engine hooks.",
+      "Game and API builds must be compatible."
+    ],
+    "route": "Use the Hollow Knight Modding API for a small local gameplay or UI change.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/hk-modding/api",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/unity.md"
+    ],
+    "more": "https://canyoumod.com/games/hollow-knight"
+  },
+  {
+    "game": "Age of Empires II: Definitive Edition",
+    "slug": "age-of-empires-ii",
+    "aliases": [
+      "aoe2",
+      "aoe ii",
+      "age of empires 2",
+      "aoe2 de"
+    ],
+    "engine": {
+      "name": "Genie Engine",
+      "slug": "genie",
+      "notes": "Data and sprite formats are build-specific; this rating excludes ranked and multiplayer play."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Upstream documents a working civilization data mod.",
+      "Data files provide a route without process injection.",
+      "Custom data must be tested in a local skirmish."
+    ],
+    "route": "Start with a local scenario or small data mod before attempting a full civilization.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/age-of-empires-ii-de/san-franciscans-civ.md",
+    "sources": [
+      "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/age-of-empires-ii-de/san-franciscans-civ.md"
+    ],
+    "more": "https://canyoumod.com/games/age-of-empires-ii"
+  },
+  {
+    "game": "Darkest Dungeon",
+    "slug": "darkest-dungeon",
+    "aliases": [
+      "dd1",
+      "darkest dungeon 1"
+    ],
+    "engine": {
+      "name": "Custom engine / data files",
+      "slug": "native",
+      "notes": "The upstream note records data modding; the engine identity is not established there."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "Upstream records a working data randomizer.",
+      "Data changes can avoid native code hooks.",
+      "Keep the first mod separate from an ongoing campaign."
+    ],
+    "route": "Use a small standalone data mod with an isolated campaign.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/darkest-dungeon/data-mod-randomizer.md",
+    "sources": [
+      "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md"
+    ],
+    "more": "https://canyoumod.com/games/darkest-dungeon"
+  },
+  {
+    "game": "Valheim",
+    "slug": "valheim",
+    "aliases": [
+      "valheim pc"
+    ],
+    "engine": {
+      "name": "Unity / C#",
+      "slug": "unity",
+      "notes": "Jotunn sits on the community loader stack; this entry covers local solo play only."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "Jotunn documents a Valheim-specific mod API.",
+      "The loader stack must match the current build.",
+      "Server compatibility is outside this assessment."
+    ],
+    "route": "Confirm Jotunn and its dependencies for your build before a small solo test.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/Valheim-Modding/Jotunn"
+    ],
+    "more": "https://canyoumod.com/games/valheim"
+  },
+  {
+    "game": "Risk of Rain 2",
+    "slug": "risk-of-rain-2",
+    "aliases": [
+      "ror2",
+      "risk of rain ii"
+    ],
+    "engine": {
+      "name": "Unity / C#",
+      "slug": "unity",
+      "notes": "R2API exposes game-specific modules; game updates and DLC affect dependencies."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "R2API offers APIs for community mods.",
+      "Installed game, loader and module versions need checking.",
+      "Online sessions are outside this assessment."
+    ],
+    "route": "Use R2API in an isolated profile after checking current compatibility.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/risk-of-thunder/R2API"
+    ],
+    "more": "https://canyoumod.com/games/risk-of-rain-2"
+  },
+  {
+    "game": "Palworld",
+    "slug": "palworld",
+    "aliases": [
+      "pal world"
+    ],
+    "engine": {
+      "name": "Unreal Engine",
+      "slug": "unreal",
+      "notes": "Community UE4SS examples exist; exact loader compatibility must be established per build."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "UE4SS documentation points to Palworld examples.",
+      "Engine versions and loader signatures can change.",
+      "Official servers and online play are excluded."
+    ],
+    "route": "First assess the current local single-player build and documented modding entry point.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://docs.ue4ss.com/lua-api/examples.html",
+      "https://github.com/UE4SS-RE/RE-UE4SS"
+    ],
+    "more": "https://canyoumod.com/games/palworld"
+  },
+  {
+    "game": "Hogwarts Legacy",
+    "slug": "hogwarts-legacy",
+    "aliases": [
+      "hogwarts",
+      "hl"
+    ],
+    "engine": {
+      "name": "Unreal Engine",
+      "slug": "unreal",
+      "notes": "An official PC Creator Kit is available; its supported scope differs from arbitrary runtime edits."
+    },
+    "verdict": "moddable",
+    "reasons": [
+      "WB Games provides an official Creator Kit.",
+      "The supported toolkit covers custom PC content.",
+      "Arbitrary code injection is not implied by toolkit support."
+    ],
+    "route": "Use the official Creator Kit and in-game mod manager for supported content.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://portkeygamessupport.wbgames.com/hc/en-us/sections/37227624241299-Mods"
+    ],
+    "more": "https://canyoumod.com/games/hogwarts-legacy"
+  },
+  {
+    "game": "Black Myth: Wukong",
+    "slug": "black-myth-wukong",
+    "aliases": [
+      "wukong",
+      "black myth",
+      "bmw"
+    ],
+    "engine": {
+      "name": "Unreal Engine 5",
+      "slug": "unreal",
+      "notes": "The upstream note examined a UE5.0 build; it reports a failed depth-compositing experiment."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "The upstream experiment is explicitly in progress.",
+      "ReShade depth compositing did not work in that build.",
+      "Do not assume a GTA-style mashup transfers to this game."
+    ],
+    "route": "Read the negative field note, then assess a much smaller supported local change.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/black-myth-wukong/reshade-depth-dead-end.md",
+    "sources": [
+      "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/black-myth-wukong/reshade-depth-dead-end.md"
+    ],
+    "more": "https://canyoumod.com/games/black-myth-wukong"
+  },
+  {
+    "game": "Dragon's Dogma 2",
+    "slug": "dragons-dogma-2",
+    "aliases": [
+      "dd2",
+      "dragons dogma 2"
+    ],
+    "engine": {
+      "name": "RE Engine",
+      "slug": "re-engine",
+      "notes": "REFramework provides Lua hooks; the upstream note is specific to one skill rework."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "A game-specific REFramework field note exists.",
+      "Loader compatibility depends on the game build.",
+      "Pawn sharing and other networked features are excluded."
+    ],
+    "route": "Assess REFramework support, then test a small change in an isolated offline save.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/dragon-s-dogma-2/blink-strike-teleports-behind-the-target-reframework-lua-ski.md",
+    "sources": [
+      "https://github.com/praydog/REFramework",
+      "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md"
+    ],
+    "more": "https://canyoumod.com/games/dragons-dogma-2"
+  },
+  {
+    "game": "Grand Theft Auto V",
+    "slug": "gta-v",
+    "aliases": [
+      "gta5",
+      "gta 5",
+      "gta v",
+      "grand theft auto 5"
+    ],
+    "engine": {
+      "name": "RAGE",
+      "slug": "rage",
+      "notes": "Story Mode and GTA Online have different safety boundaries; Online is excluded."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "The upstream example is explicitly Story Mode only.",
+      "GTA Online is protected by BattlEye.",
+      "Script Hook V does not support GTA Online."
+    ],
+    "route": "Review Story Mode compatibility only. Stop if a supported offline setup cannot be confirmed.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/gta-v/minecraft-passthrough.md",
+    "sources": [
+      "https://www.dev-c.com/gtav/scripthookv/",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/big-frameworks.md"
+    ],
+    "more": "https://canyoumod.com/games/gta-v"
+  },
+  {
+    "game": "Elden Ring",
+    "slug": "elden-ring",
+    "aliases": [
+      "er",
+      "eldenring"
+    ],
+    "engine": {
+      "name": "FromSoftware engine",
+      "slug": "fromsoft",
+      "notes": "The game includes online anti-cheat; an upstream offline experiment is not general approval."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "The standard PC game includes anti-cheat and online features.",
+      "Upstream offline research does not validate your installation.",
+      "This checker does not establish a permitted, protection-free launch route."
+    ],
+    "route": "Do not inject into the standard client. Choose an offline title with an established supported modding route.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/games/elden-ring/cs2-conversion-of-elden-ring-offline-native-rust-dll-via-me3.md",
+    "sources": [
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/big-frameworks.md",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/safety.md"
+    ],
+    "more": "https://canyoumod.com/games/elden-ring"
+  },
+  {
+    "game": "Hades II",
+    "slug": "hades-ii",
+    "aliases": [
+      "hades 2",
+      "hades2"
+    ],
+    "engine": {
+      "name": "Custom / The Forge",
+      "slug": "native",
+      "notes": "Hell2Modding is a community loader for the game's proprietary engine."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "A dedicated community loader exists.",
+      "Native loader support is sensitive to game updates.",
+      "A documented loader alone does not verify a proposed mod."
+    ],
+    "route": "Check Hell2Modding compatibility before planning a small local Lua extension.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/SGG-Modding/Hell2Modding"
+    ],
+    "more": "https://canyoumod.com/games/hades-ii"
+  },
+  {
+    "game": "Balatro",
+    "slug": "balatro",
+    "aliases": [
+      "balatro pc"
+    ],
+    "engine": {
+      "name": "LÖVE / Lua",
+      "slug": "love",
+      "notes": "Steamodded provides a community Lua modding framework."
+    },
+    "verdict": "experimental",
+    "reasons": [
+      "Steamodded exposes APIs for custom content.",
+      "Its loader and dependency requirements must be checked.",
+      "Test additions on a separate profile."
+    ],
+    "route": "Use the current Steamodded documentation to scope one original Joker.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://github.com/Steamodded/smods"
+    ],
+    "more": "https://canyoumod.com/games/balatro"
+  },
+  {
+    "game": "Fortnite",
+    "slug": "fortnite",
+    "aliases": [
+      "fortnite battle royale"
+    ],
+    "engine": {
+      "name": "Unreal Engine",
+      "slug": "unreal",
+      "notes": "Easy Anti-Cheat is required for the PC game."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "The live client requires anti-cheat.",
+      "Client injection can put your account at risk.",
+      "Epic provides UEFN for approved creative work."
+    ],
+    "route": "Use Fortnite Creative or UEFN through Epic's supported workflow.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://www.epicgames.com/help/c-37371353/a20611857?lang=en-US",
+      "https://dev.epicgames.com/documentation/fortnite/project-and-asset-security-in-unreal-editor-for-fortnite?lang=en-US"
+    ],
+    "more": "https://canyoumod.com/games/fortnite"
+  },
+  {
+    "game": "VALORANT",
+    "slug": "valorant",
+    "aliases": [
+      "val",
+      "valorant pc"
+    ],
+    "engine": {
+      "name": "Unreal Engine",
+      "slug": "unreal",
+      "notes": "Vanguard protects the PC client."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "Vanguard enforces the competitive client boundary.",
+      "A private match is still an online protected client.",
+      "This site does not recommend client mods."
+    ],
+    "route": "Keep the client unmodified; use built-in settings and official practice modes.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://playvalorant.com/en-us/news/game-updates/vanguard-x-valorant/"
+    ],
+    "more": "https://canyoumod.com/games/valorant"
+  },
+  {
+    "game": "Apex Legends",
+    "slug": "apex-legends",
+    "aliases": [
+      "apex"
+    ],
+    "engine": {
+      "name": "Modified Source engine",
+      "slug": "source",
+      "notes": "Protected online gameplay is outside the scope of this checker."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "EA prohibits third-party software that creates an unfair advantage.",
+      "Solo practice does not establish an offline modding route.",
+      "No supported client-mod route is assessed here."
+    ],
+    "route": "Use official practice features and built-in customization.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://help.ea.com/en/articles/apex-legends/play-by-the-rules/"
+    ],
+    "more": "https://canyoumod.com/games/apex-legends"
+  },
+  {
+    "game": "Rust",
+    "slug": "rust",
+    "aliases": [
+      "rust pc"
+    ],
+    "engine": {
+      "name": "Unity",
+      "slug": "unity",
+      "notes": "Easy Anti-Cheat protects normal client play."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "Normal client play uses Easy Anti-Cheat.",
+      "Server administration differs from modifying a protected client.",
+      "This offline checker does not assess server plugins."
+    ],
+    "route": "Keep the client unchanged; consult publisher-supported server administration documentation separately.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://support.facepunchstudios.com/hc/en-us/sections/203121909-EAC",
+      "https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/engines/unity.md"
+    ],
+    "more": "https://canyoumod.com/games/rust"
+  },
+  {
+    "game": "Counter-Strike 2",
+    "slug": "counter-strike-2",
+    "aliases": [
+      "cs2",
+      "counter strike",
+      "counter strike 2",
+      "csgo",
+      "cs go"
+    ],
+    "engine": {
+      "name": "Source 2",
+      "slug": "source",
+      "notes": "Trusted Mode restricts injected software; VAC-secured play is excluded."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "Valve warns that deliberate injection can lead to a VAC ban.",
+      "Local creative tools do not authorize live client modification.",
+      "Workshop creation is a separate supported workflow."
+    ],
+    "route": "Use official Workshop Tools for maps; keep the competitive client unmodified.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://help.steampowered.com/en/faqs/view/09A0-4879-4353-EF95"
+    ],
+    "more": "https://canyoumod.com/games/counter-strike-2"
+  },
+  {
+    "game": "Call of Duty: Warzone",
+    "slug": "warzone",
+    "aliases": [
+      "cod warzone",
+      "call of duty warzone",
+      "warzone 2"
+    ],
+    "engine": {
+      "name": "Proprietary engine",
+      "slug": "native",
+      "notes": "RICOCHET protects Warzone on PC."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "RICOCHET is part of the supported PC experience.",
+      "Unauthorized software can trigger enforcement.",
+      "No offline client-modding path is assessed here."
+    ],
+    "route": "Use built-in settings and official modes only.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://support.activision.com/articles/ricochet-overview",
+      "https://support.activision.com/articles/call-of-duty-security-and-enforcement-policy"
+    ],
+    "more": "https://canyoumod.com/games/warzone"
+  },
+  {
+    "game": "Genshin Impact",
+    "slug": "genshin-impact",
+    "aliases": [
+      "genshin",
+      "gi"
+    ],
+    "engine": {
+      "name": "Unity",
+      "slug": "unity",
+      "notes": "An online service with cheat-detection and client-modification restrictions."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "HoYoverse restricts unauthorized software and derivative client changes.",
+      "Solo questing is not an offline modding environment.",
+      "Disabling cheat detection is outside the supported service."
+    ],
+    "route": "Keep the client unchanged; use built-in appearance and accessibility options.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://genshin.hoyoverse.com/en-us/company/terms"
+    ],
+    "more": "https://canyoumod.com/games/genshin-impact"
+  },
+  {
+    "game": "Destiny 2",
+    "slug": "destiny-2",
+    "aliases": [
+      "destiny2",
+      "destiny"
+    ],
+    "engine": {
+      "name": "Proprietary engine",
+      "slug": "native",
+      "notes": "BattlEye is required alongside the PC game."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "The PC game requires BattlEye.",
+      "Solo activities still run inside the protected online service.",
+      "Client modification is not recommended."
+    ],
+    "route": "Use official in-game systems and supported companion services.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://help.bungie.net/hc/en-us/articles/4404263349012-Error-Code-PLUOT"
+    ],
+    "more": "https://canyoumod.com/games/destiny-2"
+  },
+  {
+    "game": "League of Legends",
+    "slug": "league-of-legends",
+    "aliases": [
+      "league",
+      "lol"
+    ],
+    "engine": {
+      "name": "Proprietary engine",
+      "slug": "native",
+      "notes": "Riot requires Vanguard while the Windows game and client are active."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "Vanguard is required for the Windows client.",
+      "Practice modes do not remove the protection boundary.",
+      "A cosmetic change is not automatically a supported client mod."
+    ],
+    "route": "Use in-game customization; avoid third-party client injectors.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://support.riotgames.com/en-us/league-of-legends/performance/riot-vanguard-faq-league-of-legends"
+    ],
+    "more": "https://canyoumod.com/games/league-of-legends"
+  },
+  {
+    "game": "Fall Guys",
+    "slug": "fall-guys",
+    "aliases": [
+      "fallguys"
+    ],
+    "engine": {
+      "name": "Unity",
+      "slug": "unity",
+      "notes": "Easy Anti-Cheat is required for the PC game."
+    },
+    "verdict": "not_recommended",
+    "reasons": [
+      "Epic requires Easy Anti-Cheat on PC.",
+      "The protected client is outside this modding workflow.",
+      "Use approved creative features instead of injection."
+    ],
+    "route": "Use the in-game Creative tools for original levels.",
+    "field_note": "https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md",
+    "sources": [
+      "https://www.epicgames.com/help/c-32551467/a13812901"
+    ],
+    "more": "https://canyoumod.com/games/fall-guys"
+  }
+]
